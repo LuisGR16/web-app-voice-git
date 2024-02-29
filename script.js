@@ -2,6 +2,8 @@ document.getElementById('start-btn').addEventListener('click', function() {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         const recognition = new SpeechRecognition();
+
+        // Establecemos el idioma de reconocimiento de voz
         recognition.lang = 'es-ES';
         
         recognition.onresult = function(event) {
